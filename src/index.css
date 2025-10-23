@@ -1,0 +1,254 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(261deg, rgb(243, 0, 231), rgb(82, 0, 141));
+  background-repeat: no-repeat;
+  height: 89.3vh;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1350px;
+}
+
+.sign_in .section {
+  width: 90%;
+  height: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 80px 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+.sign_in .section .right h1 {
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.sign_in .section .right {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign_in .section .right .form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sign_in .section .right .form input {
+  width: 520px;
+  margin-top: 15px;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  border: 1px solid #999;
+  outline: none;
+  transition: 0.3s;
+}
+
+.sign_in .section .right .form input:focus {
+  border-color: #a020f0;
+  box-shadow: 0 0 8px #a020f0;
+}
+
+
+
+.sign_in .section .right .form a {
+  margin-top: 15px;
+  margin-bottom: 30px;
+  text-decoration: none;
+  color: #686767;
+}
+
+.sign_in .section .right .form button {
+  background: linear-gradient(261deg, rgb(243, 0, 231), rgb(82, 0, 141));
+  padding: 15px 50px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: capitalize;
+
+}
+
+
+.sign_in .section .left {
+  position: relative;
+  right: -3.7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(261deg, rgb(243, 0, 231), rgb(82, 0, 141));
+  width: 90%;
+  height: 700px;
+  padding: 80px 40px;
+  border-radius: 100px 20px 20px 100px;
+}
+
+.sign_in .section .left h2 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  color: white;
+}
+
+.sign_in .section .left p {
+  margin-bottom: 1.2rem;
+  color: white;
+}
+
+.sign_in .section .left button {
+  background: linear-gradient(261deg, rgb(243, 0, 231), rgb(82, 0, 141));
+  padding: 15px 50px;
+  border-radius: 30px;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+  text-transform: uppercase;
+  border: 1px solid white;
+}
+
+.sign_in .section .left button:hover {
+  transform: scale(1.1);
+}
+
+@keyframes slideFromLeft {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.08);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* 🔥 تطبيق الحركات */
+.sign_in .section .left {
+  animation: slideFromLeft 1s ease forwards;
+}
+
+.sign_in .section .right {
+  animation: slideFromRight 1s ease forwards;
+}
+
+
+/* 💫 حركة انسيابية وشيك */
+@keyframes smoothFade {
+  0% {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ نطبّق على كل العناصر داخل الفورم */
+.sign_in .section .right .form input,
+.sign_in .section .right .form p,
+.sign_in .section .right .form a,
+.sign_in .section .right .form button {
+  opacity: 0;
+  animation: smoothFade 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+/* ⏱️ ترتيب التأخير الزمني */
+.sign_in .section .right .form input:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.sign_in .section .right .form input:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.sign_in .section .right .form input:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.sign_in .section .right .form input:nth-child(4) {
+  animation-delay: 0.8s;
+}
+.sign_in .section .right .form input:nth-child(5) {
+  animation-delay: 1s;
+}
+.sign_in .section .right .form p {
+  animation-delay: 1.2s;
+}
+.sign_in .section .right .form a {
+  animation-delay: 1.4s;
+}
+.sign_in .section .right .form button {
+  animation-delay: 1.6s;
+}
+
+/* 💜 تأثير لطيف عند التركيز */
+.sign_in .section .right .form input:focus {
+  border-color: #a020f0;
+  box-shadow: 0 0 6px rgba(160, 32, 240, 0.4);
+  transition: 0.25s ease;
+}
+
+/* ✨ ممكن كمان تضيف نفس الحركة للعنوان */
+.sign_in .section .right h1 {
+  opacity: 0;
+  animation: smoothFade 1s ease forwards;
+  animation-delay: 0.1s;
+}
+
+@media (max-width: 768px) {
+  .sign_in .section {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .sign_in .section .right input {
+    width: 100%;
+  }
+
+  .sign_in .section .left {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
